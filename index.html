@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Grid Fin Validation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Title -->
+    <h1>3D Grid Fin Validation at Sealevel</h1>
+    <h3>T∞ = 273.15 K  P∞ = 101325 Pa</h3>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Input Section -->
+        <div class="input-section">
+            <h2>Input Parameters</h2>
+            <div class="input-group">
+                <label for="mach">Mach Number (M):</label>
+                <input type="number" id="mach" value="0.7" step="0.01">
+            </div>
+            <div class="input-group">
+                <label for="width">Width of Grid Fins (mm):</label>
+                <input type="number" id="width" value="80" step="0.1">
+            </div>
+            <div class="input-group">
+                <label for="yPlus">Desired Y+ Value:</label>
+                <input type="number" id="yPlus" value="30" step="1">
+            </div>
+            <button onclick="calculate()">Calculate</button>
+        </div>
+
+        <!-- Output Section -->
+        <div class="output-section">
+            <h2>Results</h2>
+            <div class="output-box" id="vInf"></div>
+            <div class="output-box" id="mue"></div>
+            <div class="output-box" id="reynolds"></div>
+            <div class="output-box" id="deltaS"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2024 Tejas K. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
