@@ -35,8 +35,8 @@ function calculate() {
     const delta_s = ((Y_plus * mue) / (V_fri * density)) * 1000;  // Convert to mm
 
     // Display results
-    document.getElementById("vInf").innerText = `Free Stream Velocity (V∞): ${V_inf.toFixed(2)} m/s`;
+    document.getElementById("vInf").innerText = `Free Stream Velocity (V∞): ${V_inf.toFixed(4)} m/s`;
     document.getElementById("mue").innerText = `Dynamic Viscosity (μ): ${mue.toExponential(5)} Ns/m²`;
-    document.getElementById("reynolds").innerText = `Reynolds Number (Re): ${Re.toFixed(0)}`;
+    document.getElementById("reynolds").innerText = `Reynolds Number (Re): ${Re.toFixed(5)}`;
     document.getElementById("deltaS").innerText = `First Cell Height (Δs): ${delta_s.toFixed(15)} mm`;
 }
