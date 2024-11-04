@@ -8,14 +8,20 @@
 </head>
 <body>
     <!-- Main Title -->
-    <h1>3D Grid Fin Validation at Sealevel</h1>
-    <h3>T∞ = 273.15 K  P∞ = 101325 Pa</h3>
+    <h1>Flow Property Calculator at Various Altitudes</h1>
 
     <!-- Main Container -->
     <div class="container">
         <!-- Input Section -->
         <div class="input-section">
             <h2>Input Parameters</h2>
+            <div class="input-group">
+                <label for="altitude">Altitude:</label>
+                <div class="altitude-input">
+                    <input type="number" id="altitude" value="0" step="100">
+                    <button id="unitToggle" onclick="toggleUnits()">m</button>
+                </div>
+            </div>
             <div class="input-group">
                 <label for="mach">Mach Number (M):</label>
                 <input type="number" id="mach" value="0.7" step="0.01">
@@ -34,10 +40,13 @@
         <!-- Output Section -->
         <div class="output-section">
             <h2>Results</h2>
-            <div class="output-box" id="vInf"></div>
-            <div class="output-box" id="mue"></div>
-            <div class="output-box" id="reynolds"></div>
-            <div class="output-box" id="deltaS"></div>
+            <div class="output-box" id="temperature">Free Stream Temperature (T∞):</div>
+            <div class="output-box" id="pressure">Free Stream Pressure (P∞):</div>
+            <div class="output-box" id="vInf">Free Stream Velocity (V∞):</div>
+            <div class="output-box" id="mue">Dynamic Viscosity (μ):</div>
+            <div class="output-box" id="reynolds">Reynolds Number (Re):</div>
+            <div class="output-box" id="deltaS">First Cell Height (Δs):</div>
+            <div class="output-box" id="nueFarfield">Turbulent Viscosity for Farfield (νₑ):</div>
         </div>
     </div>
 
